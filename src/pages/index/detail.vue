@@ -57,16 +57,14 @@ onReachBottom ( () => {
         getCommentList();
 });
 
-
 //暴露方法名"receiveWeTrueMessage"
 window["receiveWeTrueMessage"] = async (res) => {
-    let pres
-    if (!!res.hash) {
-        pres = proxy.postHashToWeTrue(res);
+    if (res.code == 200) {
+        proxy.postHashToWeTrue(res);
     } else {
-        pres = null;
+        res = null;
     }
-    releaseCallback(pres);
+    releaseCallback(res);
 };
 
 watch(

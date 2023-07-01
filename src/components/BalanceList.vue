@@ -49,21 +49,19 @@ const transferRecord = (item) => {
                         <view class="amount">
                             {{ $t('my.balance') + ': ' + balanceFormat(item.balance) }}
                             <u-button
-                            shape="square"
-                            type="primary"
-                            size="mini"
-                            :ripple="true"
-                            class="ml-20"
-                            @click="
-                                goUrl(
+                                shape="square"
+                                type="primary"
+                                size="mini"
+                                :ripple="true"
+                                class="ml-20"
+                                @click="goUrl(
                                     `transfer?tokenName=${item.symbol}&contractId=${item.contract_id}&balance=${item.balance}`
-                                )
-                            "
-                            v-show="props.sendClick && !validThirdPartySource()"
+                                )"
+                                v-show="props.sendClick && !validThirdPartySource()"
                             >
                             <Icon
                                 icon="la:exchange-alt"
-                                width="24"
+                                width="16"
                                 class="mr-10"
                                 color="#fff"
                             />

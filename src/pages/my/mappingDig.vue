@@ -3,13 +3,13 @@
     <view class="mapping-dig">
         <view class="icon-list" v-show="!validThirdPartySource()">
         <view :style="{height:`${statusBarHeight}px`}"></view>
-            <u-icon
-                name="home"
+            <Icon
+                icon="octicon:home-16"
+                color="#f04a82"
                 class="mr-30"
-                size="34"
-                color="#fff"
+                width="18"
                 @click="reLaunchUrl('index')"
-            ></u-icon>
+            />
         </view>
         <view class="title">映射AE参与挖矿<br />领取WTT</view>
         <view class="start-mapping" v-if="userInfo.isVip">

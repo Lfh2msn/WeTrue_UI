@@ -213,6 +213,16 @@
 		}
 	  },
 	  {
+		"path": "pages/my/mintRpt",
+		"style": {
+		  "app-plus": {
+			"titleNView": false
+		  },
+		  "navigationBarTitleText": "Mint RPT",
+		  "enablePullDownRefresh": true
+		}
+	  },
+	  {
 		"path": "pages/my/migrateToken",
 		"style": {
 		  "app-plus": {

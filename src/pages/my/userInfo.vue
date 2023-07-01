@@ -7,6 +7,7 @@ import User from "@/components/User.vue";
 import BalanceList from "@/components/BalanceList.vue";
 import Backend from "@/util/backend";
 import { ref, getCurrentInstance, nextTick } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh, onReachBottom } from '@dcloudio/uni-app';
 const { proxy } = getCurrentInstance();
 
@@ -208,13 +209,13 @@ const copy = () => {
     <view class="user-info">
         <u-navbar :is-fixed="false" :title="$t('my.userInfo')" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    name="home"
-                    class="mr-30"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('../index/index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <view class="user-box">

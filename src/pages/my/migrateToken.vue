@@ -3,17 +3,18 @@
     <view class="migrate-token">
         <view class="icon-list" v-show="!validThirdPartySource()">
         <view :style="{height:`${statusBarHeight}px`}"></view>
-            <u-icon
-                name="home"
-                class="mr-30"
-                size="34"
+            <Icon
+                icon="octicon:home-16"
                 color="#fff"
+                class="mr-30"
+                width="18"
                 @click="reLaunchUrl('index')"
-            ></u-icon>
+            />
         </view>
         <view class="title">映射迁移 WET<br />兑换 WTT</view>
         <view class="start-migrate">
             <Icon
+                class="trophy"
                 icon="fa:retweet"
                 width="28"
                 color="#f04a82"

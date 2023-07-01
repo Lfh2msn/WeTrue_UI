@@ -1,6 +1,7 @@
 
 <script setup>
 import { reactive, getCurrentInstance } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh } from '@dcloudio/uni-app';
 import Request from "luch-request";
 const http = new Request();
@@ -106,13 +107,13 @@ const releaseCallback = (callback) => {
             v-show="!validThirdPartySource()"
         >
             <template v-slot:right>
-                <u-icon
-                    class="mr-30"
-                    name="home"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
-                    @click="reLaunchUrl('../../my/index')"
-                ></u-icon>
+                    class="mr-30"
+                    width="18"
+                    @click="reLaunchUrl('../index/index')"
+                />
             </template>
         </u-navbar>
         <u-cell-group :border="false">

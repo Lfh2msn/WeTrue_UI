@@ -2,6 +2,7 @@
 import TopicList from "@/components/TopicList.vue";
 import PostTopicButton from "@/components/Button/PostTopicButton.vue";
 import { ref, getCurrentInstance, nextTick } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh, onReachBottom } from '@dcloudio/uni-app';
 const { proxy } = getCurrentInstance();
 
@@ -103,13 +104,13 @@ const getTopicInfo = () => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="keyword" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    class="mr-30"
-                    name="home"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <view class="tipic-info">

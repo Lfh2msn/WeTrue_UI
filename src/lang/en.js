@@ -135,16 +135,15 @@ export default {
       openRule: 'WeTrue VIP Activation Rule',
       ruleFeeTitle: 'Activation Fee:',
       ruleBenefitsTitle: 'Benefits:',
-      ruleBenefitsText:
-        'WeTrue members-only feature. eg: Mapping mining, head replacement and so on',
+      ruleBenefitsText: 'WeTrue members-only feature. eg: Mapping mining, head replacement and so on',
       ruleExplainTitle: 'Instructions:',
-      ruleExplainText:
-        'WeTrue will open or close VIP open channels from time to time according to ecological needs',
+      ruleExplainText: 'WeTrue will open or close VIP open channels from time to time according to ecological needs',
       channel: 'Open Channel Closed',
       balanceLow: 'Balance Low',
       repeatOpen: 'Repeat Submit',
       clause: 'Need to agree to Clause',
     },
+    mintRpt: 'Mint PRT',
   },
   index: {
     praise: 'Likes',
@@ -175,8 +174,7 @@ export default {
     sendContent: 'Send Content',
     contentDetails: 'Content Details',
     replyDetails: 'Reply Details',
-    sendHint:
-      'This content will be permanently stored in AE blockchain. Miners fees will be incurred for uploading the chain. Please do not upload sensitive information such as pornographic politics to build a healthy AE ecology.',
+    sendHint: 'This content will be permanently stored in AE blockchain. Miners fees will be incurred for uploading the chain. Please do not upload sensitive information such as pornographic politics to build a healthy AE ecology.',
     founder: 'Founder',
     discuss: 'Discuss',
     views: 'Views',

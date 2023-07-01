@@ -1,6 +1,7 @@
 <script setup>
 import TopicList from "@/components/TopicList.vue";
 import { ref, getCurrentInstance, nextTick } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh, onReachBottom } from '@dcloudio/uni-app';
 import { useUserStore } from "@/stores/userStore";
 const userStore = useUserStore();
@@ -101,13 +102,13 @@ const getPostList = () => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="title" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    name="home"
-                    class="mr-30"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('../index/index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <TopicList :postList="postList"></TopicList>

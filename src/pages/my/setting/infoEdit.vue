@@ -1,6 +1,7 @@
 <script setup>
 import multiavatar from '@multiavatar/multiavatar';
 import { reactive, getCurrentInstance } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onReady, onPullDownRefresh } from '@dcloudio/uni-app';
 import { useUserStore } from "@/stores/userStore";
 const userStore = useUserStore();
@@ -206,13 +207,13 @@ const getWttBalance = () => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="$t('my.infoEdit.infoEdit')" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    class="mr-30"
-                    name="home"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('../../my/index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <u-cell-group>

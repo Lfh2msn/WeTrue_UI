@@ -32,13 +32,13 @@ const deleteBlack = () => {
             v-show="!validThirdPartySource()"
         >
             <template v-slot:right>
-                <u-icon
-                    class="mr-30"
-                    name="home"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
-                    @click="reLaunchUrl('../../index/index')"
-                ></u-icon>
+                    class="mr-30"
+                    width="18"
+                    @click="reLaunchUrl('../index')"
+                />
             </template>
         </u-navbar>
         <view class="account">

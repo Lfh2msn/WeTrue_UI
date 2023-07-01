@@ -220,7 +220,7 @@ const changeLang = () => {
                         <Icon
                             icon="fa-brands:neos"
                             color="#f04a82"
-                            width="30"
+                            width="26"
                         />
                         <view class="grid-text">AENS</view>
                     </u-grid-item>
@@ -230,12 +230,25 @@ const changeLang = () => {
                 <u-cell-group :border="false">
                     <u-cell-item
                         :title="$t('my.myWallet')"
-                        :value="'AE: ' + myIndex.balance"
+                        :value="'AE: ' + (myIndex.balance || 0)"
                         @click="goUrl('tokenList')"
                     >
                         <template v-slot:icon>
                             <Icon 
                                 icon="ph:wallet-fill"
+                                width="28"
+                                color="#f04a82"
+                                class="mr-10"
+                            />
+                        </template>
+                    </u-cell-item>
+                    <u-cell-item
+                        :title="$t('my.mintRpt')"
+                        @click="goUrl('mintRpt')"
+                    >
+                        <template v-slot:icon>
+                            <Icon 
+                                icon="game-icons:mining"
                                 width="28"
                                 color="#f04a82"
                                 class="mr-10"
@@ -449,11 +462,12 @@ page {
 
         .grid {
             width: 95%;
-            margin: 180rpx auto 0rpx;
+            display: flex;
+            padding: 160rpx 0 0;
             border-bottom: 2rpx solid #ececec;
             .grid-text {
+                text-align: center;
                 font-size: 24rpx;
-                margin-top:12rpx;
                 color: #999;
             }
         }

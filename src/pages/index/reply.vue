@@ -3,7 +3,7 @@ import mpHtml from "mp-html/dist/uni-app/components/mp-html/mp-html";
 import HeadImg from "@/components/HeadImg";
 import Name from "@/components/Name";
 import TopicMore from "@/components/TopicMore";
-
+import { Icon } from '@iconify/vue';
 import { ref, getCurrentInstance } from 'vue'
 import { onLoad, onPullDownRefresh, onReachBottom } from '@dcloudio/uni-app';
 const { proxy } = getCurrentInstance();
@@ -124,13 +124,13 @@ const praise = (type, item) => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="$t('index.replyDetails')" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    class="mr-30"
-                    name="home"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <view class="comment">

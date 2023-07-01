@@ -228,7 +228,6 @@ const share = () => {
                     </view>
                 </view>
                 <view class="more">
-                    
                     <Icon
                         :icon="postInfo.isStar ? 'ph:star-fill' : 'ph:star'"
                         width="18"
@@ -252,13 +251,13 @@ const share = () => {
                         id="share"
                         @click="share"
                     />
-                    <text class="mr-10">
-                        <Icon
+                    <Icon
                             icon="fe:bar-chart"
                             width="18"
-                            class="ml-6"
+                            class="mr-10 "
                             color="#666"
                         />
+                    <text class="read">
                         {{ postInfo.read }}
                     </text>
                 </view>
@@ -319,7 +318,6 @@ const share = () => {
                     font-size: 24rpx;
                     color: #91908e;
                     width: 100%;
-
                     text {
                         color: #999;
                         margin-right: 20rpx;
@@ -360,7 +358,10 @@ const share = () => {
                 padding: 20rpx 0 0 0;
                 border-top: 2rpx solid #e5e5e5;
                 color: #666;
-                text-align: right;              
+                text-align: right;
+                .read {
+                    vertical-align: top;
+                }
             }
         }
     }

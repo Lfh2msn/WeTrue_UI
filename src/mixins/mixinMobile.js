@@ -95,6 +95,21 @@ export const mixinMobile = {
         this.uShowToast('getTokenBalance fail')
       }
     },
+    //获取Token供应量
+    async getTokenSupply(contractId) {
+      try {
+        const aeSdk = await this.initSdk()
+        const contract = await aeSdk.initializeContract({
+          aci: Fungible_Token_Full_Aci,
+          address: contractId,
+        })
+        const callResult = await contract.total_supply()
+        return callResult.decodedResult
+      } catch (err) {
+        console.log(err)
+        this.uShowToast('getTokenSupply fail')
+      }
+    },
     //余额格式化
     balanceFormat(balance, num = 4) {
       const newBalance = toAe(balance, {
@@ -425,7 +440,7 @@ export const mixinMobile = {
         } else {
           callResult = await contract.transfer(receiveId, toAettos(amount))
         }
-        uni.hideLoading()
+        this.uHideLoading()
         return callResult
       } catch (err) {
         console.log(err)

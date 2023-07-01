@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, getCurrentInstance } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh } from '@dcloudio/uni-app';
 import { useUserStore } from "@/stores/userStore";
 const userStore = useUserStore();
@@ -102,13 +103,13 @@ const getWttBalance = () => {
     <view class="openvip-dig">
         <view class="icon-list" v-show="!validThirdPartySource()">
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
-            <u-icon
-                name="home"
-                class="mr-30"
-                size="34"
+            <Icon
+                icon="octicon:home-16"
                 color="#fff"
+                class="mr-30"
+                width="18"
                 @click="reLaunchUrl('../../index/index')"
-            ></u-icon>
+            />
         </view>
         <view class="title">{{ $t('my.openVipPage.open') }}<br />WeTrue VIP</view>
         <view class="open-openvip" v-if="!vipConfig.isWaiting && !userStore.userInfo.isVip">

@@ -50,13 +50,13 @@ const getTokenList = () => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="$t('my.myWallet')" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    name="home"
-                    class="mr-30"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <view class="ae-box">
@@ -89,7 +89,7 @@ const getTokenList = () => {
                     >
                     <Icon
                         icon="fa-solid:exchange-alt"
-                        width="28"
+                        width="16"
                         class="mr-10"
                         color="#fff"
                     />
@@ -104,7 +104,7 @@ const getTokenList = () => {
                     >
                     <Icon
                         icon="fa:qrcode"
-                        width="24"
+                        width="16"
                         class="mr-10"
                         color="#fff"
                     />

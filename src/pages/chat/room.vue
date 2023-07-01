@@ -4,6 +4,7 @@ import chatInput from '@/components/chat/chatinput';
 import messageShow from '@/components/chat/roomMessageShow';
 import socket from '@/util/socketio.js';
 import { chatRommKeyIv } from "@/config/config";
+import { Icon } from '@iconify/vue';
 import CryptoJS from 'crypto-js';
 import { ref, reactive, getCurrentInstance } from 'vue'
 import { onLoad, onReady } from '@dcloudio/uni-app';
@@ -135,13 +136,13 @@ const aesDecrypt = (text, key, iv) => {
 		<view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :back-text="online" title="Chat Room">
 			<template v-slot:right>
-                <u-icon
-                    name="home"
-                    class="mr-30"
-                    size="34"
+				<Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
 		<view class="content" id="content" :style="{height:style.contentViewHeight+'px'}">

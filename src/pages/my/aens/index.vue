@@ -1,6 +1,7 @@
 
 <script setup>
 import { reactive, getCurrentInstance } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh } from '@dcloudio/uni-app';
 import { useUserStore } from "@/stores/userStore";
 import HeadImg from "@/components/HeadImg.vue";
@@ -107,13 +108,13 @@ const changeGetList = () => {
                 <view class="block-color"></view>
                 <view class="block">
                     <view class="icon-list">
-                        <u-icon
-                            class="mr-15"
-                            name="home"
+                        <Icon
+                            icon="octicon:home-16"
                             color="#fff"
-                            size="40"
+                            class="mr-15"
+                            width="18"
                             @click="reLaunchUrl('../index')"
-                        ></u-icon>
+                        />
                     </view>
                     <view class="user-box">
                         <view class="user-top">

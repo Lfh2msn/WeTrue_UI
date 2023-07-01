@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, getCurrentInstance } from 'vue'
+import { Icon } from '@iconify/vue';
 import { onLoad, onPullDownRefresh } from '@dcloudio/uni-app';
 import { mixinUtils } from'@/mixins/mixinUtils'
 import { useUserStore } from "@/stores/userStore";
@@ -201,13 +202,13 @@ const viewHash = () => {
         <view :style="{height:`${statusBarHeight}px`, background:'#f04a82'}"></view>
         <u-navbar :is-fixed="false" :title="myTransfer.title" v-show="!validThirdPartySource()">
             <template v-slot:right>
-                <u-icon
-                    name="home"
-                    class="mr-30"
-                    size="34"
+                <Icon
+                    icon="octicon:home-16"
                     color="#f04a82"
+                    class="mr-30"
+                    width="18"
                     @click="reLaunchUrl('index')"
-                ></u-icon>
+                />
             </template>
         </u-navbar>
         <u-gap height="20"></u-gap>

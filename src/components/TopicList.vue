@@ -186,6 +186,7 @@ const releaseCallback = (item) => {
                             icon="fa-regular:comment-alt"
                             width="14"
                             color="#666"
+                            class="mr-10"
                         />
                         {{ item.commentNumber }}
                     </view>
@@ -194,6 +195,7 @@ const releaseCallback = (item) => {
                             :icon="item.isStar ? 'ph:star-fill' : 'ph:star'"
                             width="16"
                             :color="item.isStar ? '#ffc107' : '#666'"
+                            class="mr-10"
                         />
                         {{ item.star }}
                     </view>
@@ -202,6 +204,7 @@ const releaseCallback = (item) => {
                             :icon="item.isPraise ? 'ri:thumb-up-fill' : 'ri:thumb-up-line'"
                             :color="item.isPraise ? '#f04a82' : '#666'"
                             width="16"
+                            class="mr-10"
                         />
                         {{ item.praise }}
                     </view>
@@ -303,6 +306,10 @@ const releaseCallback = (item) => {
                 justify-content: space-around;
                 align-items: center;
                 color: #666;
+                .item {
+                    display: flex;
+                    align-items: center;
+                }
             }
         }
     }

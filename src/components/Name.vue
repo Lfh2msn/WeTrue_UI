@@ -39,14 +39,13 @@ const props = defineProps({
 .name-area {
     font-size: 28rpx;
     display: inline-block;
+    max-width: 95%;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 80%;
     .name {
         display: inline-block;
         font-weight: bold;
-        max-width: 50%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -64,6 +63,8 @@ const props = defineProps({
     }
     .userid {
         margin-left: 5rpx;
+        display: inline-block;
+        max-width: 90%;
         color: #999;
         font-size: 26rpx;
         overflow: hidden;
