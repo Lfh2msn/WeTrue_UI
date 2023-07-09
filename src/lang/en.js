@@ -143,7 +143,7 @@ export default {
       repeatOpen: 'Repeat Submit',
       clause: 'Need to agree to Clause',
     },
-    mintRpt: 'Mint PRT',
+    mintRpt: 'Mint RPT',
   },
   index: {
     praise: 'Likes',

@@ -1,6 +1,6 @@
 import { getStore } from '@/util/service'
 
-export const version = '3.0.04'
+export const version = '3.0.05'
 export const source = 'WeTrue'
 export let baseUrl,
   nodeUrl,
@@ -15,7 +15,7 @@ export const chatRommKeyIv = { key: '20200425FEAACD66', iv: '66DCAAEF20200425' }
 export const shTipContractId =
   'ct_2Hyt9ZxzXra5NAzhePkRsDPDWppoatVD7CtHnUoHVbuehwR8Nb'
 export const diceContractId =
-  'ct_2RNL8GrrB1JQbvn5nf4Dz3EPcFs47oKnBZSvnm5hey7SdjYG25'
+  'ct_pnBaHEPd1tFsKwfoQ5pfVd5vN9t7tdYpSu2jSSN5hM1wMuRj7'
 export const rptContractId =
   'ct_2U1usf3A8ZNUcZLkZe5rEoBTxk7eJvk9fcbRDNqmRiwXCHAYN'
 

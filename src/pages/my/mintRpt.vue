@@ -15,6 +15,7 @@ const btnLoading = ref(false) //按钮状态
 const contractId = 'ct_2U1usf3A8ZNUcZLkZe5rEoBTxk7eJvk9fcbRDNqmRiwXCHAYN'
 
 onLoad ( () => {
+    proxy.isPassword();
     getSupply();
     getBalance();
 });

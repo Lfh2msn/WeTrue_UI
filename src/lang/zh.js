@@ -143,7 +143,7 @@ export default {
       repeatOpen: '开通中，请勿重复提交',
       clause: '请阅读并勾选同意开通',
     },
-    mintRpt: 'Mint PRT',
+    mintRpt: 'Mint RPT',
   },
   index: {
     praise: '赞',
